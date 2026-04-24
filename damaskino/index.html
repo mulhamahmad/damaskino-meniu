@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damaskino - Meniu Principal</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fdf8f1;
+            margin: 0;
+            padding: 20px;
+            color: #5d4037;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .main-title {
+            font-size: 28px;
+            color: #b88e4f;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .category-card {
+            width: 145px;
+            background: #fff;
+            border: 1px solid #e2d1b5;
+            border-radius: 18px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(184, 142, 79, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: #b88e4f;
+            box-shadow: 0 8px 20px rgba(184, 142, 79, 0.25);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h4 {
+            margin: 5px 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #b88e4f, transparent);
+            margin: 20px 0 30px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 30px;
+            border-top: 1px dashed #e2d1b5;
+            padding-top: 20px;
+        }
+
+        .designer-info {
+            color: #b88e4f;
+            font-size: 0.85em;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.jpeg" alt="Logo Damaskino" class="logo">
+        <h1 class="main-title">Meniu Principal</h1>
+    </header>
+
+    <hr>
+
+    <div class="menu-grid">
+        <a href="shaorma.html" class="category-link"><div class="category-card"><img src="images/cat_shaorma.png"><h4>Șaorma</h4></div></a>
+        <a href="falafel.html" class="category-link"><div class="category-card"><img src="images/cat_falafel.jpeg"><h4>Falafel</h4></div></a>
+        <a href="crispy.html" class="category-link"><div class="category-card"><img src="images/cat_crispy.jpeg"><h4>Pui Crispy</h4></div></a>
+        <a href="burger.html" class="category-link"><div class="category-card"><img src="images/cat_burger.jpg"><h4>Burger</h4></div></a>
+        <a href="gratar.html" class="category-link"><div class="category-card"><img src="images/cat_gratar.png"><h4>Grătar</h4></div></a>
+        <a href="pui grill.html" class="category-link"><div class="category-card"><img src="images/cat_pui grill.webp"><h4>Pui grill</h4></div></a>
+        <a href="salate.html" class="category-link"><div class="category-card"><img src="images/cat_salate.webp"><h4>Salate</h4></div></a>
+        <a href="aperitive.html" class="category-link"><div class="category-card"><img src="images/cat_aperitive.jpeg"><h4>Aperitive</h4></div></a>
+        <a href="desert.html" class="category-link"><div class="category-card"><img src="images/cat_desert.webp"><h4>Deserturi</h4></div></a>
+        <a href="placinte.html" class="category-link"><div class="category-card"><img src="images/cat_placinte.jpeg"><h4>Plăcinte</h4></div></a>
+    </div>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <p style="color: #b88e4f; font-weight: bold; margin-bottom: 15px;">Urmăriți-ne și vizitați-ne:</p>
+            <a href="https://www.instagram.com/damaskino.cluj?igsh=ZmpyejdocGw0czJ3" target="_blank" style="margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="30">
+            </a>
+            <a href="https://maps.app.goo.gl/wVRRYogAf74PEUZx7?g_st=aw" target="_blank" style="margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" width="30">
+            </a>
+        </div>
+
+        <div class="designer-info">
+            Designed by <b>MULHAM AHMAD</b><br>
+            0770866506
+        </div>
+    </footer>
+
+</body>
+</html>

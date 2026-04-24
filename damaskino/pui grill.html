@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damaskino - Pagina Meniu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fdf8f1;
+            margin: 0;
+            padding: 20px;
+            color: #5d4037;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .category-title {
+            font-size: 26px;
+            color: #b88e4f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .back-nav {
+            margin-bottom: 20px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: #b88e4f;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #b88e4f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .back-link:hover {
+            background-color: #b88e4f;
+            color: white;
+        }
+
+        .items-list {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .food-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e2d1b5;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(184, 142, 79, 0.1);
+        }
+
+        .food-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px;
+            flex-shrink: 0;
+        }
+
+        .food-details {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .food-details h3 {
+            margin: 0 0 5px 0;
+            color: #5d4037;
+            font-size: 1.2em;
+        }
+
+        .food-details p {
+            margin: 0;
+            color: #8d6e63;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .price {
+            margin-top: 8px;
+            color: #d35400;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #b88e4f, transparent);
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #b88e4f; /* اللون الذهبي المتناسق مع المطعم */
+            border-top: 1px dashed #e2d1b5;
+        }
+
+        .designer-info {
+            display: block;
+            margin-top: 5px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html" class="back-link">← Înapoi</a>
+    </nav>
+
+    <header>
+        <img src="images/logo.jpeg" alt="Damaskino Logo" class="logo">
+        <h1 class="category-title">pui grill</h1>
+    </header>
+
+    <hr>
+
+    <div class="items-list">
+        
+        <div class="food-item">
+            <img src="gratar/Sistavuk La Gratar Meniu.webp" alt="Sistavuk La Gratar Meniu">
+            <div class="food-details">
+                <h3>Sistavuk La Gratar Meniu</h3>
+                <p>Piept de pui, legume la gratar, ceapa cu patrunjel, sos de usturoi, castraveti murati, orez sau cartofi prajiti, lipie - 450g.</p>
+                <div class="price">49.99 RON</div>
+            </div>
+        </div>
+        </div>
+    <div class="items-list">
+        
+        <div class="food-item">
+            <img src="gratar/Mix Gratar Pentru 2 Persoane Meniu.jpeg" alt="Mix Gratar Pentru 2 Persoane Meniu">
+            <div class="food-details">
+                <h3>Mix Gratar Pentru 2 Persoane Meniu</h3>
+                <p>1 buc adana kebab, 1 buc frigarui de pui, 1 buc kebab classic, 1 buc airipioare de pui, cartofi prajiti, ceapa cu patrunjel, sos de usturoi, castraveti murati, lipie - 750g.</p>
+                <div class="price">99.99 RON</div>
+            </div>
+        </div>
+        </div>
+        <div class="items-list">
+        
+    <div class="food-item">
+            <img src="gratar/Adana Kebab La Lipie.jpg" alt="Adana Kebab La Lipie">
+            <div class="food-details">
+                <h3>Adana Kebab La Lipie</h3>
+                <p>Lipia, carne de vita/ berbecuti, ceapa cu patrunjel, rosii, hummus - 350g.</p>
+                <div class="price">44.99 RON</div>
+            </div>
+        </div>
+        </div>
+        <div class="items-list">
+    <div class="food-item">
+            <img src="gratar/Adana Kebab Meniu.webp" alt="Adana Kebab Meniu">
+            <div class="food-details">
+                <h3>Adana Kebab Meniu</h3>
+                <p>Carne de vita/ berbecuti, ardei rosu, ardei iute, patrunjel, usturoi, hummus - 450g.</p>
+                <div class="price">69.99 RON</div>
+            </div>
+        </div>
+        </div>
+        <div class="items-list">
+    <div class="food-item">
+            <img src="gratar/Airipioare De Pui La Gratar Meniu.jpg" alt="Airipioare De Pui La Gratar Meniu">
+            <div class="food-details">
+                <h3>Airipioare De Pui La Gratar Meniu</h3>
+                <p>Aripioare de pui, legume la gratar, ceapa cu patrunjel - 450g.</p>
+                <div class="price">49.99 RON</div>
+            </div>
+        </div>
+        </div>
+        <div class="items-list">
+    <div class="food-item">
+            <img src="gratar/Sistavuk La Gratar La Lipie.jpeg" alt="Sistavuk La Gratar La Lipie">
+            <div class="food-details">
+                <h3>Sistavuk La Gratar La Lipie</h3>
+                <p>Lipia, piept de pui, cartofi prajiti, ceapa cu patrunjel, sos de usturoi, castraveti murati - 350g.</p>
+                <div class="price">44.99 RON</div>
+            </div>
+    
+        </div>
+        </div>
+        <div class="items-list">
+<hr>
+    <div style="text-align: center; margin-top: 20px; padding-bottom: 30px;">
+        <p style="color: #b88e4f; font-weight: bold; margin-bottom: 15px;">Urmăriți-ne și vizitați-ne:</p>
+        
+        <a href="https://www.instagram.com/damaskino.cluj?igsh=ZmpyejdocGw0czJ3" target="_blank" style="text-decoration: none; margin: 0 15px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width: 35px; height: 35px;">
+        </a>
+
+        <a href="https://maps.app.goo.gl/jXKa5rwvjzkKzN2H9?g_st=ac" target="_blank" style="text-decoration: none; margin: 0 15px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" style="width: 35px; height: 35px;">
+        </a>                                    
+</div>
+ 
+<footer>
+        Designed by <span class="designer-info">MULHAM AHMAD</span>
+        <br>
+        0770866506
+    </footer>      
+</body>
+</html>
