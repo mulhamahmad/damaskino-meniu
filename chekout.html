@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizare Comandă - Damaskino</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; background-color: #fdf8f1; padding: 20px; color: #5d4037; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: #b88e4f; text-align: center; border-bottom: 2px solid #fdf8f1; padding-bottom: 10px; }
+        .order-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .total-price { font-size: 1.5em; font-weight: bold; text-align: center; margin: 20px 0; color: #d35400; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #e2d1b5; border-radius: 8px; box-sizing: border-box; }
+        .btn-order { width: 100%; background: #25d366; color: white; border: none; padding: 15px; border-radius: 10px; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .btn-clear { background: #e74c3c; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Coșul tău de cumpărături</h2>
+    
+    <div id="orderList">
+        </div>
+
+    <div class="total-price">Total: <span id="finalTotal">0.00</span> RON</div>
+
+    <hr>
+
+    <h3>Detalii Comandă</h3>
+    <div class="form-group">
+        <label>Numele tău:</label>
+        <input type="text" id="clientName" placeholder="Ex: Mulham Ahmad">
+    </div>
+    <div class="form-group">
+        <label>Tip Masă / Telefon:</label>
+        <input type="text" id="clientDetails" placeholder="Nr. Masă sau Nr. Telefon">
+    </div>
+    <div class="form-group">
+        <label>Metodă de plată:</label>
+        <select id="paymentMethod">
+            <option value="Cash la recepție">Cash la recepție</option>
+            <option value="Card la recepție">Card la recepție</option>
+        </select>
+    </div>
+
+    <button class="btn-order" onclick="sendToWhatsApp()">Trimite Comanda pe WhatsApp</button>
+    <button class="btn-order btn-clear" onclick="clearCart()" style="background:#8d6e63">Golește Coșul</button>
+    <p style="text-align: center; font-size: 0.8em; margin-top: 15px;">* Comanda va fi trimisă direct la restaurant prin WhatsApp.</p>
+</div>
+
+<script>
+    function displayOrder() {
+        let cart = JSON.parse(localStorage.getItem('damaskino_cart')) || [];
+        const list = document.getElementById('orderList');
+        const totalDisp = document.getElementById('finalTotal');
+        
+        if (cart.length === 0) {
+            list.innerHTML = "<p style='text-align:center;'>Coșul este gol!</p>";
+            return;
+        }
+
+        list.innerHTML = "";
+        let total = 0;
+        cart.forEach((item, index) => {
+            total += item.price;
+            list.innerHTML += `
+                <div class="order-item">
+                    <span>${item.name}</span>
+                    <span>${item.price.toFixed(2)} RON</span>
+                </div>
+            `;
+        });
+        totalDisp.innerText = total.toFixed(2);
+    }
+
+    function sendToWhatsApp() {
+        let cart = JSON.parse(localStorage.getItem('damaskino_cart')) || [];
+        if (cart.length === 0) return alert("Coșul este gol!");
+
+        let name = document.getElementById('clientName').value;
+        let details = document.getElementById('clientDetails').value;
+        let payment = document.getElementById('paymentMethod').value;
+
+        if (!name || !details) return alert("Vă rugăm să completați numele și detaliile!");
+
+        let message = *Nouă Comandă Damaskino*%0A--------------------------%0A;
+        message += *Client:* ${name}%0A;
+        message += *Detalii:* ${details}%0A;
+        message += *Plată:* ${payment}%0A--------------------------%0A;
+        
+        let total = 0;
+        cart.forEach(item => {
+            message += - ${item.name}: ${item.price} RON%0A;
+            total += item.price;
+        });
+        
+        message += --------------------------%0A*TOTAL: ${total.toFixed(2)} RON*;
+
+        // استبدل الرقم أدناه برقم واتساب المطعم الحقيقي (بداية بـ 40 لرومانيا)
+        let phone = "40770866506"; 
+        window.open(https://wa.me/${phone}?text=${message}, '_blank');
+    }
+
+    function clearCart() {
+        localStorage.removeItem('damaskino_cart');
+        location.reload();
+    }
+
+    window.onload = displayOrder;
+</script>
+
+</body>
+</html>
